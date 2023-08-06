@@ -74,7 +74,7 @@ We are in the most important part of this project now, as this step decides how 
     - Hence, we will be extracting only the names of entities / persons here.
         - We will go with first 3 entities in 'cast' column
         - Also, for column 'crew' , we will go with the director name as director of the movie is important in recommending a movie to any user based on content based filtering.
-- Created functions that work to fetch the above info from the cast, crew & director info from data. For more details refer to the movie recommender system.ipynb notebook uploaded.
+- Created functions that work to fetch the above info from the cast, crew & director info from data. For more details refer to the "Movie_Recommendor_System.ipynb" notebook uploaded.
 - Transformations we would need to apply now:
   - We will be merging the 4 columns into a single feature which will store tags for the respective movies.
   - However, before that, we need to apply some transformation on 4 columns too.
@@ -97,15 +97,18 @@ Now that we have our desired data, our next steps would be as follows.
 
 ### **Recommender function**
 
-- Creating a recommendor function which will recommend 5 movies out when provided with a movie as input
+- Creating a recommender function that will recommend 5 movies out when provided with a movie as input
     - when provided with a movie title as input, find the index position in the data.
-    - using index of the input movie, fetch the cosine similarity vector for that index position.
-        - fetch the top 5 movies ( first 5 similar movies from the descending sorted cosine simialrity vectors)
-    - Saving dataframe used for similarity scores to retrieve the index positions along with the similarity_scores as pickle files.
+    - using the index of the input movie, fetch the cosine similarity vector for that index position.
+        - fetch the top 5 movies ( first 5 similar movies from the descending sorted cosine similarity vectors)
+    - Saving data frame used for similarity scores to retrieve the index positions along with the similarity_scores as pickle files.
           - We will be using these files in order to make our webpage.
 
 ### **Data Deployment**
 
-- 
-
+- Webpage using Streamlit:
+    - use custom functions to get the poster & info around movies from the "tmdb" website.
+    - creating a selection box that stores a dropdown menu of all the movies - for input from the user.
+    - creating a recommend button that fires the top 5 similar books similar to the input.
+          - get the poster for the result movies using their "poster_path" column values & using API key to get that from tmdb website.
         
