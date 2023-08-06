@@ -1,8 +1,8 @@
 # Movie-Recommender-System
 Project Objective: We want to build a recommender system for movies that gives us the top 5 similar movies for an input movie name.
 
-This project was completed using the content-based filtering approach to achieve the objective.
-It also covers the steps we did for the project deployment using Heroku.
+This project was completed using the content-based filtering approach.
+It also covers the steps we did for the app webpage design & project deployment using Heroku.
 
 ### **Data Collection:**
 - Data used to build this was taken from Kaggle:  
