@@ -74,25 +74,25 @@ We are in the most important part of this project now, as this step decides how 
     - Hence, we will be extracting only the names of entities / persons here.
         - We will go with first 3 entities in 'cast' column
         - Also, for column 'crew' , we will go with the director name as director of the movie is important in recommending a movie to any user based on content based filtering.
-- Created 3 functions which works to fetch the above info from cast, crew & director info from data. For more details refer the movie-recommender-system.ipynb notebook uploaded.
+- Created functions that work to fetch the above info from the cast, crew & director info from data. For more details refer to the movie recommender system.ipynb notebook uploaded.
 - Transformations we would need to apply now:
   - We will be merging the 4 columns into a single feature which will store tags for the respective movies.
-  - However, before that we need to apply some transformation on 4 columns too.
+  - However, before that, we need to apply some transformation on 4 columns too.
     - We need to merge the words found in a single element which will be stored as comma-separated tags.
 
 ### **Data Preparation**
 
-Now that we have our desired data, our next steps woudl be as follows.
+Now that we have our desired data, our next steps would be as follows.
 
 - text cleaning: stemming using PorterStemmer() from 'nltk' library
 - remove stopwords from tags
-- apply word vectorization ( using CountVectorizer Class in scikit learn library )
+- apply word vectorization ( using CountVectorizer Class in sci-kit learn library )
 
 - Post the vectorization of the movies, calculating the distances between 2 vectors (movies)
-  - We cannot use 'euclidean distance' as it doesnt perform well in higher dimensions ( Curse of dimensionality )
-  - Instead we can calculate the cosine distance ( angle between the vectors in that dimensional space)
+  - We cannot use 'Euclidean distance' as it doesn't perform well in higher dimensions ( Curse of dimensionality )
+  - Instead, we can calculate the cosine distance ( angle between the vectors in that dimensional space)
     
-- Then , we can calculate similarity based on cosine distance (cosine similarity) as distance is inversely proportional to similarity.
+- Then, we can calculate similarity based on cosine distance (cosine similarity) as the distance is inversely proportional to similarity.
   - using cosine_similarity function from sklearn.metrics.pairwise
 
 ### **Recommender function**
@@ -101,4 +101,11 @@ Now that we have our desired data, our next steps woudl be as follows.
     - when provided with a movie title as input, find the index position in the data.
     - using index of the input movie, fetch the cosine similarity vector for that index position.
         - fetch the top 5 movies ( first 5 similar movies from the descending sorted cosine simialrity vectors)
+    - Saving dataframe used for similarity scores to retrieve the index positions along with the similarity_scores as pickle files.
+          - We will be using these files in order to make our webpage.
+
+### **Data Deployment**
+
+- 
+
         
