@@ -2,8 +2,9 @@ import streamlit as st
 import pickle
 import requests
 
+#note: Replace API key with your own key from the tmdb website instead of the one mentioned here
 def fetch_poster(movie_id):
-    url = "https://api.themoviedb.org/3/movie/{}?api_key=4438749923cfa9c6f7ea4aaf350d1ba1".format(movie_id)
+    url = "https://api.themoviedb.org/3/movie/{}?api_key=4438749923cfa9c6f7ea4aaf350f4gh6".format(movie_id)
     response = requests.get(url)
     movie_details = response.json()
     poster_path = movie_details['poster_path']
