@@ -1,5 +1,5 @@
 # Movie-Recommender-System
-Project Objective: We want to build a recommender system for movies that gives us the top 5 similar movies for an input movie name.
+Project Objective: To build a recommender system for movies that could give us the top 5 similar movies for an input movie name.
 
 This project was completed using the content-based filtering approach.
 It also covers the steps we did for the app webpage design & project deployment using Heroku.
@@ -55,7 +55,7 @@ https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata?select=tmdb_5000_movies
     So, these movies still can remain in the data.
   - However, we found some movies to be unusual of runtime 0 mins which suggests these movies should be removed as there is no runtime of a movie, then we don't have content here to recommend.
 
-- As we are building our recommendation system on a content-based approach, we need to pick the variables needed for us to achieve that.
+- As we are building our recommendation system on a content-based approach, we only need to pick the variables needed for us to achieve that.
 - The basic idea is to create an attribute as 'tags' for every movie which will be then projected into 
 n-dimensional space which will give us the similarity between movies using various distance metrics.
 - After careful observation, picked the below attributes for our model here:
