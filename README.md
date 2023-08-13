@@ -108,6 +108,7 @@ Now that we have our desired data, our next steps would be as follows.
           - We will be using these files in order to make our webpage.
 
 ### **Data Deployment**
+- Pending. Will update soon.
 
 - Webpage using Streamlit:
     - use custom functions to get the poster & info around movies from the "tmdb" website.
