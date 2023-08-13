@@ -107,12 +107,14 @@ Now that we have our desired data, our next steps would be as follows.
     - Saving data frame used for similarity scores to retrieve the index positions along with the similarity_scores as pickle files.
           - We will be using these files in order to make our webpage.
 
-### **Data Deployment**
-- Pending. Will update soon.
+### **UI & Data Deployment**
 
 - Webpage using Streamlit:
     - use custom functions to get the poster & info around movies from the "tmdb" website.
     - creating a selection box that stores a dropdown menu of all the movies - for input from the user.
     - creating a recommend button that fires the top 5 similar books similar to the input.
           - get the poster for the result movies using their "poster_path" column values & using API key to get that from tmdb website.
+
+- Deployment using Heroku:
+    - Pending. Will update soon on this.
         
